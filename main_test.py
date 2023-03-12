@@ -8,10 +8,10 @@ import math
 def test_main_1():
     captureout = io.StringIO()
     sys.stdout = captureout
-    datastr = 'are arrow amore aspire aero'
-    sys.stdin = io.StringIO(datastr)
+    # datastr = 'are arrow amore aspire aero'
+    # sys.stdin = io.StringIO(datastr)
 
-    main.main()
+    rsum, csum, rowidx, maxnum = main.main()
     sys.stdout = sys.__stdout__
     print('captured ', captureout.getvalue())
     lines = captureout.getvalue().split('\n')
@@ -25,33 +25,16 @@ def test_main_1():
     # res = re.search(regex_string, main.evenlist)
     # assert res != none
     # print(res.group())
-    assert len(main.main.result) == 3
-    assert main.main.result[0] == 'are'
-    assert main.main.result[1] == 'amore'
-    assert main.main.result[2] == 'aspire'
-
-
-def test_main_2():
-    captureout = io.StringIO()
-    sys.stdout = captureout
-    datastr = 'assertive arrogant bartender carter racer'
-    sys.stdin = io.StringIO(datastr)
-
-    main.main()
-    sys.stdout = sys.__stdout__
-    print('captured ', captureout.getvalue())
-    lines = captureout.getvalue().split('\n')
-    print(lines)
-
-    # regex_string = r'[\w,\w]*1'
-    # regex_string += r'[\w,\w]*3'
-    # regex_string += r'[\w,\w]*5'
-    # regex_string += r'[\w,\w]*'
-    # print(regex_string)
-    # res = re.search(regex_string, main.evenlist)
-    # assert res != none
-    # print(res.group())
-    assert len(main.main.result) == 3
-    assert main.main.result[0] == 'assertive'
-    assert main.main.result[1] == 'bartender'
-    assert main.main.result[2] == 'carter'
+    print(rsum)
+    assert len(rsum) == 3
+    assert rsum[0] == 317
+    assert rsum[1] == 242
+    assert rsum[2] == 209
+    assert len(csum) == 5
+    assert csum[0] == 176
+    assert csum[1] == 109
+    assert csum[2] == 163
+    assert csum[3] == 207
+    assert csum[4] == 113
+    assert rowidx == 0
+    assert maxnum == 99
