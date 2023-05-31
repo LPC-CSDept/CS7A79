@@ -1,21 +1,52 @@
+def getMaxElement(numbers):
+    """
+    ########################################
+    Code Your Program here
+    ########################################
+    """
+
+
+def getSumRows(numbers):
+    """
+    ########################################
+    Code Your Program here
+    ########################################
+    """
+
+
+def getSumCols(numbers):
+    """
+    ########################################
+    Code Your Program here
+    ########################################
+    """
+
+
+def getMaxElmRow(numbers):
+    """
+    ########################################
+    Code Your Program here
+    ########################################
+    """
+
+
 def main():
     ##################################################
     numbers = [[99, 11, 66, 86, 55],
-               [44, 21, 65, 88, 24],
+               [44, 21, 65, 88, 24, 56],
                [33, 77, 32, 33, 34]]
     ##################################################
-    # Use thses variables to find the solution
-    rsum = []       # summation of row
-    csum = []       # summation of column
-    rowidx = 0      # the row index that has the max sum
-    maxnum = 0      # the greatest value in the entire list
-    ##################################################
-    # Code your program here
+    ret = getMaxElement(numbers)
+    print('Return value from getMaxElement', ret)
 
-    ##################################################
-    # Do not delete the return statement
-    return rsum, csum, rowidx, maxnum
-##
+    ret = getSumRows(numbers)
+    print('Return value from getSumRows', ret)
+
+    ret = getSumCols(numbers)
+    print('Return value from getSumCols', ret)
+
+    ret = getMaxElmRow(numbers)
+    print('Return value from getMaxElmRow', ret)
 
 
 if __name__ == '__main__':
